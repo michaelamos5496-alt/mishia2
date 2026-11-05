@@ -405,7 +405,7 @@ html.lenis, html.lenis body { height: auto; }
 }
 
 /* ---------- Inspired by the reference: highlighter, hero strip, impact band, FAQ ---------- */
-.mark { background: linear-gradient(transparent 62%, rgba(143, 211, 238, .85) 62%, rgba(143, 211, 238, .85) 92%, transparent 92%); padding: 0 .08em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.mark { background: linear-gradient(transparent 62%, rgba(143, 211, 238, .85) 62%, rgba(143, 211, 238, .85) 92%, transparent 92%); padding: 0 .08em; background-repeat: no-repeat; background-size: 100% 100%; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .mark-sky { background: linear-gradient(transparent 62%, rgba(63, 122, 69, .9) 62%, rgba(63, 122, 69, .9) 92%, transparent 92%); }
 .hero h1 .hl { background: none; }
 .strip { position: relative; z-index: 2; margin-top: -70px; }
@@ -551,3 +551,13 @@ html.lenis, html.lenis body { height: auto; }
 .form fieldset.choices + fieldset.choices { margin-top: 2px; }
 @media (min-width: 900px) { .sf-grid { grid-template-columns: .8fr 1.2fr; gap: clamp(36px, 6vw, 80px); } .sf-intro { position: sticky; top: calc(var(--nav-h) + 24px); } }
 .all-link { margin-top: 26px; text-align: center; }
+
+/* ---------- GSAP effects ---------- */
+.w-mask { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .14em; margin-bottom: -.14em; }
+.w { display: inline-block; will-change: transform; }
+.gsap-on .hero-copy .hl { display: inline-block; }
+.mag { will-change: transform; }
+.nav .brand img { transition: width .35s var(--ease); }
+@media (min-width: 900px) { .nav.scrolled .brand img { width: 128px; } }
+.proj, .way, .news-card, .band-grid li, .jump a, .tabs button { position: relative; }
+.sr-only { left: 0; top: 0; }
