@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b2830">
+  <title>Mi Shia Foundation | Charity starts at home</title>
+  <meta name="description" content="Mi Shia Foundation is a Ghanaian nonprofit founded in 2019. We bring food, clothing, stationery and toiletries to rural communities, and we are working towards free medical aid and small clinics.">
+  <meta property="og:title" content="Mi Shia Foundation | This is our home">
+  <meta property="og:description" content="Food, clothing, stationery and toiletries for rural communities in Ghana. Help us reach one more village.">
+  <meta property="og:image" content="assets/images/support.jpg">
+  <link rel="icon" href="https://mishiafoundation.org/wp-content/uploads/2025/03/cropped-Favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/images/hero-poster.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-in">
+      <a class="brand" href="#home" aria-label="Mi Shia Foundation, home">
+        <img src="assets/images/logo-small.png" alt="Mi Shia, this is our home" width="420" height="144">
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="#vision">Our vision</a>
+        <a href="#founder">Founder</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-cta nav-drawer-cta" href="#donate">Support Us</a>
+      </nav>
+      <a class="btn btn-cta btn-sm nav-cta" href="#donate">Support Us</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="hero-media" aria-hidden="true">
+      <img class="hero-poster" src="assets/images/hero-poster.jpg" alt="" width="960" height="540" fetchpriority="high" decoding="async">
+      <video id="hero-video" muted loop playsinline preload="none" poster="assets/images/hero-poster.jpg"></video>
+      <script>
+        /* Each device downloads only its own clip (about 3 MB on a phone, 6 MB on a computer).
+           Nothing is downloaded in data-saver mode, on 2G, or when the visitor asked for less motion:
+           they just see the still picture. Phones only autoplay muted, inline video, so those flags are set first. */
+        (function () {
+          var v = document.getElementById('hero-video'); if (!v) return;
+          var c = navigator.connection || {}, m = window.matchMedia;
+          if (c.saveData || /(^|-)2g$/.test(c.effectiveType || '') || (m && m('(prefers-reduced-motion: reduce)').matches)) return;
+          var phone = (m && m('(max-width: 720px), (pointer: coarse) and (max-height: 520px)').matches) || /(^|-)3g$/.test(c.effectiveType || '');
+          v.muted = true; v.defaultMuted = true; v.volume = 0;
+          ['muted', 'playsinline', 'webkit-playsinline', 'disablepictureinpicture', 'disableremoteplayback'].forEach(function (a) { v.setAttribute(a, ''); });
+          v.preload = 'auto';
+          v.src = phone ? 'assets/videos/hero-mobile.mp4' : 'assets/videos/hero-desktop.mp4';
+          function go() { var p = v.play(); if (p && p.catch) p.catch(arm); }
+          function arm() {
+            ['touchend', 'pointerup', 'click', 'keydown'].forEach(function (t) {
+              window.addEventListener(t, function f() { window.removeEventListener(t, f, true); go(); }, { capture: true, passive: true });
+            });
+          }
+          v.addEventListener('canplay', go, { once: true });
+          v.addEventListener('playing', function () { v.classList.add('on'); });
+          document.addEventListener('visibilitychange', function () { if (!document.hidden && v.paused && v.src) go(); });
+        })();
+      </script>
+    </div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker kicker-light"><span class="dot" aria-hidden="true"></span>Ghana &middot; Nonprofit since 2019</p>
+        <h1 id="hero-title">Charity starts <span class="hl">at home.</span></h1>
+        <p class="hero-sub">Mi Shia Foundation brings food, clothing, stationery and toiletries to rural communities across Ghana, and we are working towards free medical aid and small clinics for the villages that need them most.</p>
+        <div class="hero-cta">
+          <a class="btn btn-cta btn-lg" href="#donate">Support Us <span aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-ghost btn-lg" href="#projects">See our projects</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ HERO STRIP: featured project + quick give ============ -->
+  <section class="strip" aria-label="Featured project and ways to give">
+    <div class="wrap strip-grid">
+      <div class="strip-give">
+        <p class="strip-title">Help us reach one more village.</p>
+        <p>Every bit helps us bring food, clothing, stationery, toiletries and, one day, free medical care.</p>
+        <div class="strip-btns">
+          <a class="btn btn-cta" data-donate href="mailto:info@mishiafoundation.org?subject=I%20would%20like%20to%20support%20Mi%20Shia%20Foundation">Support Us</a>
+          <a class="btn btn-outline" href="#contact" data-enquiry="Partnership or grant">Partner with us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <figure class="about-photo reveal">
+        <img src="assets/images/support-sm.jpg" srcset="assets/images/support-sm.jpg 600w, assets/images/support.jpg 810w" sizes="(min-width: 900px) 440px, 90vw" alt="Mi Shia volunteers kneeling and smiling with children who are holding new books" width="600" height="800" loading="lazy" decoding="async">
+        <figcaption class="about-badge"><strong>Since 2019</strong><span>Charity starts at home</span></figcaption>
+      </figure>
+
+      <div class="about-copy reveal">
+        <p class="kicker">About us</p>
+        <h2 id="about-title">&ldquo;Mi Shia&rdquo; means <span class="mark">&ldquo;my home&rdquo;</span> in Ga.</h2>
+        <p class="lede">Mi Shia is a nonprofit charity founded in 2019. We chose the name because we believe charity starts at home: our mission is to help Ghana, our home, in any way possible.</p>
+        <p>We reach out to rural areas where basic necessities are hard to come by. We are small but growing, and we strive to do as much as we can, as often as we can, so that families have what they need to live with dignity and hope.</p>
+
+        <ul class="essentials" aria-label="What we give">
+          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 22h34a17 17 0 0 1-34 0z"/><path d="M18 15c0-3 3-3 3-7M27 15c0-3 3-3 3-7" class="acc"/></svg><span>Food</span></li>
+          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 6 6 13l5 7 6-3v24h14V17l6 3 5-7-11-7c-1 3-4 5-7 5s-6-2-7-5z"/><path d="M20 6c1 3 4 5 4 5s3-2 4-5" class="acc"/></svg><span>Clothing</span></li>
+          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 41l2-9 22-22 7 7-22 22z"/><path d="M29 13l7 7" class="acc"/></svg><span>Stationery</span></li>
+          <li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="19" width="20" height="23" rx="4"/><path d="M20 19v-6h8v6M24 13V7h6"/><path d="M19 29h10" class="acc"/></svg><span>Toiletries</span></li>
+        </ul>
+
+        <div class="row-cta">
+          <a class="btn btn-cta" href="#donate">Support Us</a>
+          <a class="link-arrow" href="#vision">Our vision <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="kicker">Our projects</p>
+        <h2 id="projects-title">Outreach that reaches the families <span class="mark">who need it.</span></h2>
+        <p>Mi Shia has been actively engaged in outreach across Ghana. Here is where we have been, and what is coming next.</p>
+      </header>
+
+      <article class="feature reveal" id="screening">
+        <img src="assets/images/projects/screening.jpg" srcset="assets/images/projects/screening-sm.jpg 560w, assets/images/projects/screening.jpg 800w" sizes="(min-width: 900px) 50vw, 100vw" alt="A young woman having a dental check-up" width="800" height="600" loading="lazy" decoding="async">
+        <div class="feature-body">
+          <span class="chip chip-cta">Upcoming project</span>
+          <h3>Medical &amp; dental health screening</h3>
+          <p>We are excited to announce our upcoming event focused on medical and dental health screening. It aims to provide vital health services to underserved communities, promoting overall well-being and access to healthcare.</p>
+          <p class="strong">Your support is crucial in making this project possible.</p>
+          <div class="row-cta">
+            <a class="btn btn-cta" href="#donate">Support this project</a>
+            <a class="link-arrow" href="#contact" data-enquiry="Partnership or grant">Fund or partner on it <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="proj-grid">
+        <article class="proj reveal">
+          <img src="assets/images/projects/ayim-sm.jpg" srcset="assets/images/projects/ayim-sm.jpg 560w, assets/images/projects/ayim.jpg 900w" sizes="(min-width: 900px) 360px, (min-width: 600px) 45vw, 92vw" alt="A volunteer handing out supplies to a crowd of children under a tree" width="560" height="420" loading="lazy" decoding="async">
+          <div class="proj-body">
+            <span class="chip">Ayim Village</span>
+            <h3>Food &amp; essential supplies</h3>
+            <p>We visited Ayim Village, where we provided food and essential supplies to families facing hardships.</p>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <img src="assets/images/projects/gonteng-sm.jpg" srcset="assets/images/projects/gonteng-sm.jpg 560w, assets/images/projects/gonteng.jpg 900w" sizes="(min-width: 900px) 360px, (min-width: 600px) 45vw, 92vw" alt="Children holding wrapped Christmas hampers with a volunteer dressed as Santa" width="560" height="420" loading="lazy" decoding="async">
+          <div class="proj-body">
+            <span class="chip">Gonteng Village</span>
+            <h3>Christmas hampers</h3>
+            <p>Regularly, in the festive season, we spread joy by distributing hampers filled with goodies for children and families.</p>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <img src="assets/images/projects/pads-sm.jpg" srcset="assets/images/projects/pads-sm.jpg 560w, assets/images/projects/pads.jpg 800w" sizes="(min-width: 900px) 360px, (min-width: 600px) 45vw, 92vw" alt="Menstrual hygiene event for schoolgirls" width="560" height="420" loading="lazy" decoding="async">
+          <div class="proj-body">
+            <span class="chip">In schools &middot; with Orange Sanitary Pads</span>
+            <h3>Sanitary pads for girls</h3>
+            <p>In collaboration with Orange Sanitary Pads, we provide sanitary pads to schools, so young girls have access to essential hygiene products.</p>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <img src="assets/images/projects/iftar-sm.jpg" srcset="assets/images/projects/iftar-sm.jpg 560w, assets/images/projects/iftar.jpg 900w" sizes="(min-width: 900px) 360px, (min-width: 600px) 45vw, 92vw" alt="Volunteers handing out food to a gathered crowd" width="560" height="420" loading="lazy" decoding="async">
+          <div class="proj-body">
+            <span class="chip">Nima</span>
+            <h3>Ramadan iftar</h3>
+            <p>During Ramadan, we organized an iftar event and provided food to break the fast, fostering community spirit and support.</p>
+          </div>
+        </article>
+      </div>
+      <p class="all-link reveal"><a class="btn btn-outline" href="projects.html">See every project in detail <span aria-hidden="true">&rarr;</span></a></p>
+    </div>
+  </section>
+
+  <!-- ============ IMPACT BAND ============ -->
+  <section class="band" aria-labelledby="band-title">
+    <div class="wrap">
+      <h2 id="band-title" class="band-title reveal">One home. <span class="mark mark-sky">Real impact.</span></h2>
+      <ul class="band-grid">
+        <li class="reveal"><strong>2019</strong><span>Year we were founded</span></li>
+        <li class="reveal"><strong>5</strong><span>Projects, including one upcoming</span></li>
+        <li class="reveal"><strong>500+</strong><span>Students reached at one school hygiene event</span></li>
+        <li class="reveal"><strong>4</strong><span>Essentials delivered: food, clothing, stationery, toiletries</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ VISION (dark band) ============ -->
+  <section class="section vision" id="vision" aria-labelledby="vision-title">
+    <div class="wrap vision-grid">
+      <div class="vision-copy reveal">
+        <p class="kicker kicker-light">Our vision</p>
+        <h2 id="vision-title">Free medical aid for <span class="mark mark-sky">rural villages.</span></h2>
+        <p class="lede">We aim to extend our impact by providing free medical aid to these villages. We aspire to establish simple healthcare services and small clinics, bringing essential medical care closer to those who need it most.</p>
+        <p>With <strong>your help</strong>, we hope to achieve this in the near future, creating healthier and more resilient communities.</p>
+        <div class="row-cta">
+          <a class="btn btn-cta" href="#donate">Support Us</a>
+          <a class="btn btn-ghost" href="#contact" data-enquiry="Partnership or grant">Partner with us</a>
+        </div>
+      </div>
+
+      <div class="vision-side reveal">
+        <img src="assets/images/projects/vision-sm.jpg" srcset="assets/images/projects/vision-sm.jpg 560w, assets/images/projects/vision.jpg 900w" sizes="(min-width: 900px) 460px, 92vw" alt="Mi Shia volunteers and children waving at the camera" width="560" height="420" loading="lazy" decoding="async">
+        <div class="objectives">
+          <h3>Our objectives</h3>
+          <ol>
+            <li>Regularly distributing food, clothing, stationery and toiletries to rural areas.</li>
+            <li>Raising awareness and funds to support our initiatives.</li>
+            <li>Collaborating with local and international partners to expand our reach and resources.</li>
+            <li>Establishing free medical aid services and small clinics in underserved villages to improve access to healthcare.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUPPORT ============ -->
+  <section class="section support" id="donate" aria-labelledby="donate-title">
+    <div class="wrap">
+      <header class="section-head center reveal">
+        <p class="kicker">Support us</p>
+        <h2 id="donate-title">Ways you can <span class="mark">make a difference.</span></h2>
+        <p>Give, partner or share. Every bit helps us reach more communities.</p>
+      </header>
+
+      <div class="ways">
+        <article class="way way-main reveal">
+          <span class="way-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg></span>
+          <h3>Give</h3>
+          <p>Support our outreach and our plan for free medical aid. Tell us how you would like to give and our team will reply with the details.</p>
+          <a class="btn btn-cta" id="give-btn" data-donate href="mailto:info@mishiafoundation.org?subject=I%20would%20like%20to%20support%20Mi%20Shia%20Foundation">Support Us</a>
+        </article>
+        <article class="way reveal">
+          <span class="way-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM16 13a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2zM2.5 20c.4-3.4 2.6-5 5.5-5s5.1 1.6 5.5 5M14.5 15.3c3 0 5.2 1.2 6 4.2"/></svg></span>
+          <h3>Partner or fund a project</h3>
+          <p>We collaborate with local and international partners, as we did with Orange Sanitary Pads. Funders and organisations are welcome to talk to us.</p>
+          <a class="btn btn-outline" href="#contact" data-enquiry="Partnership or grant">Start a conversation</a>
+        </article>
+        <article class="way reveal">
+          <span class="way-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/></svg></span>
+          <h3>Raise awareness</h3>
+          <p>One of our objectives is raising awareness and funds. Tell someone about Mi Shia, or ask us how your school, workplace or group can get involved.</p>
+          <a class="btn btn-outline" href="#contact" data-enquiry="General enquiry">Ask how</a>
+        </article>
+        <article class="way reveal">
+          <span class="way-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".8" fill="currentColor"/></svg></span>
+          <h3>Follow and share</h3>
+          <p>See our latest outreach and help us reach more people by sharing our story with your friends and family.</p>
+          <a class="btn btn-outline" href="https://www.instagram.com/mishia_foundation" target="_blank" rel="noopener">@mishia_foundation<span class="sr-only"> (opens Instagram in a new tab)</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="faq-intro reveal">
+        <p class="kicker">Questions &amp; answers</p>
+        <h2 id="faq-title">Good to <span class="mark">know.</span></h2>
+        <p>Can&rsquo;t find what you are looking for? Our team replies Monday to Friday, 08:30 to 17:30.</p>
+        <a class="btn btn-outline" href="#contact">Contact us</a>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary>What does &ldquo;Mi Shia&rdquo; mean?</summary><p>In Ga, &ldquo;Mi Shia&rdquo; means &ldquo;my home&rdquo;. We chose it because we believe charity starts at home. Our slogan is &ldquo;This is our home&rdquo;.</p></details>
+        <details><summary>What does Mi Shia do?</summary><p>We are a nonprofit founded in 2019. We hand out food, clothing, stationery and toiletries to rural communities in Ghana, including Ayim Village and Gonteng Village, and we work with partners such as Orange Sanitary Pads to provide sanitary pads to schools.</p></details>
+        <details><summary>What is the long-term goal?</summary><p>Free medical aid for rural villages and, in time, small clinics. Our upcoming medical and dental health screening is a step in that direction.</p></details>
+        <details><summary>How can I support the foundation?</summary><p>You can give, partner with us or fund a project, or help us raise awareness. Use the Support Us button or contact us at info@mishiafoundation.org and we will reply with the details.</p></details>
+        <details><summary>Can my organisation partner with Mi Shia?</summary><p>Yes. One of our objectives is collaborating with local and international partners to expand our reach and resources. Choose &ldquo;Partnership or grant&rdquo; in the contact form.</p></details>
+        <details><summary>Who founded Mi Shia?</summary><p>Dr. Djifa van Staalduinen, a medical doctor since 2021, founded the foundation in 2019.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOUNDER ============ -->
+  <section class="section founder" id="founder" aria-labelledby="founder-title">
+    <div class="wrap founder-grid">
+      <div class="founder-photos reveal">
+        <img class="fp-main" src="assets/images/founder-sm.jpg" srcset="assets/images/founder-sm.jpg 449w, assets/images/founder.jpg 898w" sizes="(min-width: 900px) 380px, 70vw" alt="Dr. Djifa van Staalduinen smiling in a bright dress" width="449" height="640" loading="lazy" decoding="async">
+        <img class="fp-small" src="assets/images/founder-2.jpg" alt="Dr. Djifa van Staalduinen in scrubs with a stethoscope" width="200" height="200" loading="lazy" decoding="async">
+      </div>
+      <div class="founder-copy reveal">
+        <p class="kicker">The founder</p>
+        <h2 id="founder-title">Dr. Djifa van&nbsp;Staalduinen</h2>
+        <p class="lede">After earning her medical degree in 2021, she chose to channel her energy into a different kind of healing: she founded Mi Shia Foundation.</p>
+        <p>Dr. Djifa van Staalduinen is a dynamic and passionate young woman ready to take the world by storm and bring others along for the ride. Driven by a lifelong desire to uplift those in need, she founded the Mi Shia Foundation.</p>
+        <div class="bio-more" id="bio-more">
+          <p>Growing up, Djifa was deeply affected by the hardships faced by those with fewer resources. Frustrated by the inefficiencies of other organizations, she decided to create a foundation where every effort directly benefits those in need. While she views this work as a heartfelt hobby, Djifa&rsquo;s enthusiasm and dedication are infectious.</p>
+          <p>Through the Mi Shia Foundation, she hopes to inspire others to tag along and join her mission to make the world a better place, one compassionate act at a time.</p>
+        </div>
+        <button class="link-btn" id="founder-more" type="button" aria-expanded="false" aria-controls="bio-more">Read more</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEDIA ============ -->
+  <section class="section media" id="media" aria-labelledby="media-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="kicker">Media</p>
+        <h2 id="media-title">Moments from <span class="mark">our outreach.</span></h2>
+      </header>
+
+      <div class="tabs reveal" role="tablist" aria-label="Media categories">
+        <button role="tab" id="tab-pictures" aria-controls="panel-pictures" aria-selected="true" data-tab="pictures">Pictures <span>10</span></button>
+        <button role="tab" id="tab-videos" aria-controls="panel-videos" aria-selected="false" data-tab="videos" tabindex="-1">Videos</button>
+        <button role="tab" id="tab-news" aria-controls="panel-news" aria-selected="false" data-tab="news" tabindex="-1">News <span>2</span></button>
+      </div>
+
+      <div class="panel" id="panel-pictures" role="tabpanel" aria-labelledby="tab-pictures">
+        <ul class="gallery">
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/Group-Pic.jpg" data-caption="The Mi Shia team with children and their gifts"><img src="assets/images/gallery/thumb/Group-Pic.jpg" alt="The Mi Shia team with children and their gifts" width="420" height="560" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic.jpg" data-caption="Santa with children and Christmas hampers"><img src="assets/images/gallery/thumb/pic.jpg" alt="Santa with children and Christmas hampers" width="557" height="560" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic1.jpg" data-caption="Food and supplies being handed out"><img src="assets/images/gallery/thumb/pic1.jpg" alt="Food and supplies being handed out" width="420" height="560" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic2.jpg" data-caption="Volunteers in Mi Shia t-shirts"><img src="assets/images/gallery/thumb/pic2.jpg" alt="Volunteers in Mi Shia t-shirts" width="419" height="560" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic3.jpg" data-caption="Children and young people in a village"><img src="assets/images/gallery/thumb/pic3.jpg" alt="Children and young people in a village" width="560" height="420" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic4.jpg" data-caption="Gifts and supplies shared in a village"><img src="assets/images/gallery/thumb/pic4.jpg" alt="Gifts and supplies shared in a village" width="560" height="420" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic5.jpg" data-caption="Children at an outreach"><img src="assets/images/gallery/thumb/pic5.jpg" alt="Children at an outreach" width="560" height="556" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic6.jpg" data-caption="A volunteer with a child and gifts"><img src="assets/images/gallery/thumb/pic6.jpg" alt="A volunteer with a child and gifts" width="420" height="560" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic7.jpg" data-caption="Santa with two children"><img src="assets/images/gallery/thumb/pic7.jpg" alt="Santa with two children" width="440" height="560" loading="lazy" decoding="async"></button></li>
+          <li><button class="gal-item" type="button" data-full="assets/images/gallery/pic8.jpg" data-caption="Volunteers and children waving"><img src="assets/images/gallery/thumb/pic8.jpg" alt="Volunteers and children waving" width="560" height="420" loading="lazy" decoding="async"></button></li>
+        </ul>
+      </div>
+
+      <div class="panel" id="panel-videos" role="tabpanel" aria-labelledby="tab-videos" hidden>
+        <!-- To add a video: put the file in assets/videos/ and add a <figure class="vid"> with a <video controls preload="none" poster="..."> here. -->
+        <div class="empty">
+          <span class="empty-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M20 16l13 8-13 8z" class="acc"/></svg></span>
+          <h3>Videos are on the way.</h3>
+          <p>We are gathering footage from our outreach. Until then, take a look at the pictures from our visits.</p>
+          <button class="btn btn-cta" type="button" data-goto="pictures">See the pictures</button>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-news" role="tabpanel" aria-labelledby="tab-news" hidden>
+        <div class="news-grid">
+          <article class="news-card">
+            <img src="assets/images/news/Post_2.jpg" alt="Menstrual hygiene event for schoolgirls" width="800" height="600" loading="lazy" decoding="async">
+            <div class="news-body">
+              <p class="news-tag">News <span>12 March 2025</span></p>
+              <h3>Orange Sanitary Pads collaborates with Mi Shia Foundation to promote Menstrual Hygiene</h3>
+              <p>Mi Shia Foundation has partnered with Orange Tulip to celebrate the World Menstrual Hygiene Day on Monday May 27, 2024 at the Osu Presbyterian Secondary School.</p>
+              <button class="link-btn" type="button" data-article="article-orange">Read the article <span aria-hidden="true">&rarr;</span></button>
+              <div class="article-full" id="article-orange" hidden>
+                <p>Mi Shia Foundation has partnered with Orange Tulip to celebrate the World Menstrual Hygiene Day on Monday May 27, 2024 at the Osu Presbyterian Secondary School.</p>
+                <p>The event which took place at the Osu Presbyterian Church Chapel, gathered over 500 female students with the aim to educate young women on menstrual hygiene under the theme &ldquo;menstrual friendly world.&rdquo;</p>
+                <p>According to the team, this collaborative effort aimed to empower young women with knowledge and resources to manage their menstrual health effectively.</p>
+                <p>Speaking at the event, founder of Mishia Foundation, Miss Dzifa renowned for her presence on TikTok and a qualified medical doctor, hinted at the significance of maintaining personal hygiene, particularly during menstruation.</p>
+                <p>Mr. Michael Eshun, Chief Operations Officer at Orange Sanitary, emphasized that periods are natural and not a cause for shame or disgust.</p>
+                <p>The students actively participated in a Q&amp;A session, seeking clarification and sharing insights. Some students received gifts, while all were provided with packs of sanitary pads courtesy of Mishia Foundation and Orange Charities, the corporate social responsibility arm of Orange Sanitary Pads.</p>
+                <h4>About Mi Shia Foundation</h4>
+                <p>Mi Shia Foundation, is a small nonprofit organisation founded in 2019. Mi Shia comes from Ga &ldquo;my home&rdquo; because we believe charity starts at home. We aim to help people of lower socioeconomic status not only with health but basic needs.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="assets/images/news/Post_1.jpg" alt="A young woman having a dental check-up" width="800" height="600" loading="lazy" decoding="async">
+            <div class="news-body">
+              <p class="news-tag">Event <span>12 March 2025</span></p>
+              <h3>Medical and Dental Health Screening</h3>
+              <p>We are excited to announce our upcoming event focused on medical and dental health screening. This initiative aims to provide vital health services to underserved communities, promoting overall well-being and access to healthcare. <strong>Your support is crucial in making these activities possible!</strong></p>
+              <a class="link-btn" href="#donate">Support this event <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Picture viewer">
+      <button class="lb-close" type="button" aria-label="Close picture">&times;</button>
+      <button class="lb-nav lb-prev" type="button" aria-label="Previous picture">&#8249;</button>
+      <figure><img id="lb-img" src="" alt=""><figcaption id="lb-cap"></figcaption></figure>
+      <button class="lb-nav lb-next" type="button" aria-label="Next picture">&#8250;</button>
+    </dialog>
+    <dialog class="reader" id="reader" aria-labelledby="reader-title">
+      <button class="lb-close" type="button" aria-label="Close article">&times;</button>
+      <p class="news-tag" id="reader-tag"></p>
+      <h3 id="reader-title"></h3>
+      <div id="reader-body"></div>
+    </dialog>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div class="contact-copy reveal">
+        <p class="kicker kicker-light">Contact us</p>
+        <h2 id="contact-title">Let&rsquo;s make a difference together.</h2>
+        <p class="lede">Donors, funders, partners and volunteers: tell us how you would like to help and our team will get in touch.</p>
+
+        <ul class="contact-list">
+          <li><span class="c-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><strong>Location</strong><span>Accra, Ghana</span></div></li>
+          <li><span class="c-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><strong>Email</strong><a href="mailto:info@mishiafoundation.org">info@mishiafoundation.org</a></div></li>
+          <li><span class="c-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><strong>Call</strong><a href="tel:+233266655570">+233 (0) 26 665 5570</a></div></li>
+          <li><span class="c-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><strong>Hours</strong><span>Monday to Friday, 08:30 to 17:30</span></div></li>
+        </ul>
+
+        <form class="form" id="contact-form" novalidate>
+          <fieldset class="choices">
+            <legend>What is it about?</legend>
+            <label><input type="radio" name="enquiry" value="General enquiry" checked><span>General enquiry</span></label>
+            <label><input type="radio" name="enquiry" value="Partnership or grant"><span>Partnership or grant</span></label>
+            <label><input type="radio" name="enquiry" value="Support a project"><span>Support a project</span></label>
+          </fieldset>
+          <div class="f-row">
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="f-row">
+            <div class="field"><label for="f-org">Organisation (optional)</label><input id="f-org" name="org" type="text" autocomplete="organization"></div>
+            <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="f-message">Your message</label><textarea id="f-message" name="message" rows="4" required></textarea></div>
+          <button class="btn btn-cta btn-lg" type="submit">Send message <span aria-hidden="true">&rarr;</span></button>
+          <p class="f-status" id="f-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="map-card reveal">
+        <div class="map" role="img" aria-label="Street map of Accra, Ghana, with a pin on the Mi Shia Foundation area">
+          <div class="tilebox"><img src="assets/images/map/z14-8180-7934.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8181-7934.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8182-7934.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8183-7934.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8184-7934.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8185-7934.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8180-7935.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8181-7935.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8182-7935.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8183-7935.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8184-7935.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8185-7935.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8180-7936.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8181-7936.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8182-7936.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8183-7936.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8184-7936.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8185-7936.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8180-7937.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8181-7937.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8182-7937.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8183-7937.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8184-7937.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8185-7937.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8180-7938.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8181-7938.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8182-7938.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8183-7938.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8184-7938.png" width="256" height="256" alt="" loading="lazy" decoding="async"><img src="assets/images/map/z14-8185-7938.png" width="256" height="256" alt="" loading="lazy" decoding="async"></div>
+          <div class="map-pin">
+            <svg viewBox="0 0 34 44" aria-hidden="true"><path d="M17 1C8.2 1 1 8 1 16.8 1 28.5 17 43 17 43s16-14.5 16-26.2C33 8 25.8 1 17 1z" fill="#8fd3ee" stroke="#0b2830" stroke-width="2"/><circle cx="17" cy="16.5" r="6" fill="#0b2830"/></svg>
+            <span>Mi Shia Foundation &middot; Accra</span>
+          </div>
+        </div>
+        <a class="map-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">&copy; OpenStreetMap contributors</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-top">
+      <div class="foot-brand">
+        <p class="foot-tag">This is our home.</p>
+        <p class="foot-small">Mi Shia Foundation is a nonprofit founded in 2019. We bring food, clothing, stationery and toiletries to rural communities in Ghana.</p>
+        <a class="btn btn-cta" href="#donate">Support Us</a>
+      </div>
+      <nav class="foot-col" aria-label="Explore">
+        <h3>Explore</h3>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#vision">Our vision</a>
+        <a href="#donate">Support</a>
+        <a href="#founder">Founder</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="foot-col">
+        <h3>Reach us</h3>
+        <a href="mailto:info@mishiafoundation.org">info@mishiafoundation.org</a>
+        <a href="tel:+233266655570">+233 (0) 26 665 5570</a>
+        <a href="https://www.instagram.com/mishia_foundation" target="_blank" rel="noopener">Instagram @mishia_foundation<span class="sr-only"> (opens in a new tab)</span></a>
+        <span>Accra, Ghana</span>
+      </div>
+    </div>
+    <p class="foot-word" aria-hidden="true"><span>Mi Shia</span></p>
+    <div class="wrap foot-bar">
+      <p>&copy; 2026 Mi Shia Foundation. All rights reserved.</p>
+      <p>Developed by <a href="https://theimagedept.vercel.app" target="_blank" rel="noopener">TheImageDept</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/about.js"></script>
+  <script>
+    /* Scroll animation: GSAP + ScrollTrigger (+ Lenis smooth scrolling on mouse computers).
+       Loaded after the page; skipped on data-saver, 2G or "reduce motion". The page works without it. */
+    (function () {
+      var m = window.matchMedia, c = navigator.connection || {};
+      if ((m && m('(prefers-reduced-motion: reduce)').matches) || c.saveData || /(^|-)2g$/.test(c.effectiveType || '')) return;
+      var fine = m && m('(hover: hover) and (pointer: fine)').matches;
+      function load(src) {
+        return new Promise(function (ok, no) {
+          var s = document.createElement('script'); s.src = src; s.async = false; s.onload = ok; s.onerror = no;
+          document.head.appendChild(s);
+        });
+      }
+      function go() {
+        load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js')
+          .then(function () { return load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'); })
+          .then(function () { return fine ? load('https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js').catch(function () {}) : null; })
+          .then(function () { return load('assets/js/motion.js'); })
+          .catch(function () {});
+      }
+      if (document.readyState === 'complete') go(); else window.addEventListener('load', go);
+    })();
+  </script>
+</body>
+</html>
