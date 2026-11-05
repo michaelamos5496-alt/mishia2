@@ -732,11 +732,11 @@ html.lenis, html.lenis body { height: auto; }
 
 /* photos in ragged brush-edge frames */
 .about-photo { filter: drop-shadow(0 22px 26px rgba(11, 40, 48, .3)); }
-.about-photo img { border-radius: 0; box-shadow: none; -webkit-mask: url("../images/frame.svg") center / 100% 100% no-repeat; mask: url("../images/frame.svg") center / 100% 100% no-repeat; }
+.about-photo img { border-radius: 0; box-shadow: none; clip-path: var(--ragged); }
 .frames { filter: drop-shadow(0 14px 14px rgba(11, 40, 48, .32)); }
-.frames li { padding: 11px; background: #fff; -webkit-mask: url("../images/frame.svg") center / 100% 100% no-repeat; mask: url("../images/frame.svg") center / 100% 100% no-repeat; }
+.frames li { padding: 11px; background: #fff; clip-path: var(--ragged); }
 .frames img { border: 0; border-radius: 2px; box-shadow: none; }
-.faq-photo { max-width: 300px; margin: 28px 0 0; padding: 12px; background: var(--cta); -webkit-mask: url("../images/frame.svg") center / 100% 100% no-repeat; mask: url("../images/frame.svg") center / 100% 100% no-repeat; filter: none; }
+.faq-photo { max-width: 300px; margin: 28px 0 0; padding: 12px; background: var(--cta); clip-path: var(--ragged); filter: none; }
 .faq-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 2px; }
 @media (max-width: 899px) { .faq-photo { display: none; } }
 
@@ -792,9 +792,9 @@ html.lenis, html.lenis body { height: auto; }
 .about-cluster { position: relative; isolation: isolate; width: 100%; max-width: 540px; margin-inline: auto; aspect-ratio: 1 / .98; filter: drop-shadow(0 20px 22px rgba(11, 40, 48, .28)); }
 .ac { position: absolute; margin: 0; display: flex; }
 .ac img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.ac-main { right: 0; top: 0; width: 62%; aspect-ratio: 3 / 4; -webkit-mask: url("../images/frame.svg") center / 100% 100% no-repeat; mask: url("../images/frame.svg") center / 100% 100% no-repeat; }
-.ac-a { left: 0; bottom: 0; width: 44%; aspect-ratio: 1; padding: 9px; background: #fff; -webkit-mask: url("../images/frame.svg") center / 100% 100% no-repeat; mask: url("../images/frame.svg") center / 100% 100% no-repeat; }
-.ac-b { left: 5%; top: 8%; width: 31%; aspect-ratio: 3 / 4; padding: 8px; background: #fff; -webkit-mask: url("../images/frame.svg") center / 100% 100% no-repeat; mask: url("../images/frame.svg") center / 100% 100% no-repeat; }
+.ac-main { right: 0; top: 0; width: 62%; aspect-ratio: 3 / 4; clip-path: var(--ragged); }
+.ac-a { left: 0; bottom: 0; width: 44%; aspect-ratio: 1; padding: 9px; background: #fff; clip-path: var(--ragged); }
+.ac-b { left: 5%; top: 8%; width: 31%; aspect-ratio: 3 / 4; padding: 8px; background: #fff; clip-path: var(--ragged); }
 .about-cluster .about-badge { left: auto; right: -6px; bottom: 12%; z-index: 3; }
 .about-cluster .brush-about { left: auto; right: -14%; top: auto; bottom: 8%; width: 80%; height: 110px; transform: rotate(12deg); }
 .about-feats { display: grid; gap: 14px; margin: 22px 0 6px; }
@@ -859,3 +859,9 @@ html.lenis, html.lenis body { height: auto; }
 .donate-card .f-status.err { color: var(--cta-dark); }
 @media (min-width: 640px) { .d-row { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 900px) { .donate-grid { grid-template-columns: .9fr 1.1fr; gap: clamp(36px, 6vw, 80px); } .donate-card { padding: 36px; } }
+
+/* ragged photo edge (same shape as before, as a clip-path so it never depends on an image file loading) */
+:root { --ragged: polygon(0.00% 1.90%, 2.50% 2.84%, 5.00% 2.02%, 7.50% 1.36%, 10.00% 2.26%, 12.50% 1.18%, 15.00% 1.18%, 17.50% 4.94%, 20.00% 2.30%, 22.50% 0.04%, 25.00% 1.38%, 27.50% 1.06%, 30.00% 1.88%, 32.50% 2.04%, 35.00% 2.00%, 37.50% 1.92%, 40.00% 3.00%, 42.50% 2.68%, 45.00% 1.64%, 47.50% 0.00%, 50.00% 2.70%, 52.50% 2.92%, 55.00% 1.00%, 57.50% 2.82%, 60.00% 2.96%, 62.50% 1.14%, 65.00% 2.56%, 67.50% 1.18%, 70.00% 2.92%, 72.50% 1.24%, 75.00% 2.66%, 77.50% 2.12%, 80.00% 1.38%, 82.50% 1.26%, 85.00% 1.24%, 87.50% 1.42%, 90.00% 2.94%, 92.50% 1.60%, 95.00% 1.42%, 97.50% 2.70%, 96.50% 0.00%, 96.78% 2.50%, 98.17% 5.00%, 95.12% 7.50%, 100.00% 10.00%, 97.38% 12.50%, 97.45% 15.00%, 98.42% 17.50%, 96.62% 20.00%, 98.30% 22.50%, 96.72% 25.00%, 98.60% 27.50%, 98.62% 30.00%, 97.75% 32.50%, 98.42% 35.00%, 98.00% 37.50%, 98.30% 40.00%, 96.97% 42.50%, 95.70% 45.00%, 97.88% 47.50%, 96.42% 50.00%, 98.53% 52.50%, 96.42% 55.00%, 99.03% 57.50%, 99.42% 60.00%, 97.38% 62.50%, 98.08% 65.00%, 98.62% 67.50%, 98.55% 70.00%, 97.15% 72.50%, 96.33% 75.00%, 98.50% 77.50%, 101.55% 80.00%, 98.50% 82.50%, 98.00% 85.00%, 98.55% 87.50%, 97.97% 90.00%, 98.42% 92.50%, 98.22% 95.00%, 97.67% 97.50%, 100.00% 97.76%, 97.50% 95.62%, 95.00% 98.76%, 92.50% 97.78%, 90.00% 98.16%, 87.50% 97.04%, 85.00% 95.28%, 82.50% 98.22%, 80.00% 98.92%, 77.50% 98.22%, 75.00% 98.50%, 72.50% 98.86%, 70.00% 97.48%, 67.50% 97.50%, 65.00% 98.60%, 62.50% 97.40%, 60.00% 97.44%, 57.50% 99.80%, 55.00% 98.70%, 52.50% 98.90%, 50.00% 97.34%, 47.50% 97.56%, 45.00% 97.82%, 42.50% 97.98%, 40.00% 98.68%, 37.50% 96.32%, 35.00% 98.22%, 32.50% 97.56%, 30.00% 98.30%, 27.50% 98.28%, 25.00% 97.38%, 22.50% 97.54%, 20.00% 98.60%, 17.50% 99.78%, 15.00% 98.36%, 12.50% 97.96%, 10.00% 97.02%, 7.50% 98.42%, 5.00% 97.54%, 2.50% 98.40%, 2.77% 100.00%, 2.23% 97.50%, 5.25% 95.00%, 2.38% 92.50%, 3.52% 90.00%, 2.67% 87.50%, 3.25% 85.00%, 2.40% 82.50%, 1.75% 80.00%, 3.30% 77.50%, 3.05% 75.00%, 3.50% 72.50%, 3.70% 70.00%, 3.23% 67.50%, 3.52% 65.00%, 4.22% 62.50%, 2.30% 60.00%, 3.55% 57.50%, 3.42% 55.00%, 1.35% 52.50%, 2.98% 50.00%, 2.42% 47.50%, 3.50% 45.00%, 2.95% 42.50%, 3.45% 40.00%, 2.98% 37.50%, 2.35% 35.00%, 3.33% 32.50%, 1.65% 30.00%, 3.52% 27.50%, 2.92% 25.00%, 3.42% 22.50%, 4.53% 20.00%, 1.75% 17.50%, 2.50% 15.00%, 1.32% 12.50%, 2.55% 10.00%, 3.25% 7.50%, 2.48% 5.00%, 1.43% 2.50%); }
+/* the nav button never wraps */
+.nav-cta { white-space: nowrap; flex: none; }
+@media (max-width: 359px) { .nav-cta .arr { display: none; } }
