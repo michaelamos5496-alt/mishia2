@@ -97,7 +97,7 @@
     gsap.from('.hero-copy .kicker', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out', clearProps: 'all' });
     gsap.from('.hero-sub', { y: 30, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.55, clearProps: 'all' });
     gsap.from('.hero-cta .btn', { y: 30, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12, delay: 0.75, clearProps: 'all' });
-    gsap.from('.strip-give', { y: 70, opacity: 0, duration: 1.1, ease: 'power3.out', delay: 0.95, clearProps: 'all' });
+    gsap.from('.strip-facts, .strip-give', { y: 70, opacity: 0, duration: 1.1, ease: 'power3.out', stagger: 0.12, delay: 0.95, clearProps: 'all' });
     gsap.from('.hero-media', { scale: 1.12, duration: 2.2, ease: 'power2.out', clearProps: 'transform' });
     var cta = $('.hero-cta .btn-cta');
     if (cta) gsap.fromTo(cta, { boxShadow: '0 0 0 0 rgba(214,63,40,.55)' }, { boxShadow: '0 0 0 16px rgba(214,63,40,0)', duration: 1.5, repeat: 2, delay: 2.2, ease: 'power2.out', clearProps: 'boxShadow' });
@@ -117,7 +117,7 @@
   });
 
   /* ---- 4. cards deal in (staggered), replacing the plain fade ---- */
-  [['.proj-grid .proj', '.proj-grid'], ['.ways .way', '.ways'], ['.band-grid li', '.band-grid'], ['.essentials li', '.essentials'],
+  [['.proj-grid .proj', '.proj-grid'], ['.ways .way', '.ways'], ['.band-grid li', '.band-grid'], ['.hexcards .hexcard', '.hexcards'], ['.join-card', '.join-grid'], ['.polaroids li', '.polaroids'],
    ['.news-grid .news-card', '.news-grid'], ['.faq-list details', '.faq-list'], ['.objectives li', '.objectives']].forEach(function (pair) {
     var els = $$(pair[0]); if (!els.length) return;
     take(els); take($(pair[1]));

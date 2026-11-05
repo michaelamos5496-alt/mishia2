@@ -183,7 +183,7 @@ window.__scrollToEl = scrollToEl;
 
 // Phones: card rows swipe sideways; dots show which card you are on
 (function () {
-  var rows = document.querySelectorAll('.proj-grid, .ways, .band-grid, .news-grid');
+  var rows = document.querySelectorAll('.proj-grid, .ways, .band-grid, .news-grid, .hexcards');
   rows.forEach(function (track) {
     var cards = Array.prototype.slice.call(track.children);
     if (cards.length < 2) return;

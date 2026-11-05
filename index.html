@@ -20,6 +20,13 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <div class="topbar">
+    <div class="topbar-in">
+      <p class="tb-left"><a href="mailto:info@mishiafoundation.org">info@mishiafoundation.org</a><span>Accra, Ghana</span><span>Mon to Fri, 08:30 to 17:30</span></p>
+      <p class="tb-right">Follow us <a href="https://www.instagram.com/mishia_foundation" target="_blank" rel="noopener">@mishia_foundation<span class="sr-only"> (opens Instagram in a new tab)</span></a></p>
+    </div>
+  </div>
+
   <header class="nav" id="nav">
     <div class="nav-in">
       <a class="brand" href="#home" aria-label="Mi Shia Foundation, home">
@@ -72,6 +79,7 @@
       </script>
     </div>
 
+    <span class="brush brush-hero" aria-hidden="true"></span>
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="kicker kicker-light"><span class="dot" aria-hidden="true"></span>Ghana &middot; Nonprofit since 2019</p>
@@ -86,15 +94,23 @@
     </div>
   </section>
 
-  <!-- ============ HERO STRIP: featured project + quick give ============ -->
-  <section class="strip" aria-label="Featured project and ways to give">
+  <!-- ============ REACH STRIP: facts + give panel ============ -->
+  <section class="strip" aria-label="Our reach and ways to give">
     <div class="wrap strip-grid">
+      <div class="strip-facts">
+        <p class="strip-label">Our reach</p>
+        <ul>
+          <li><strong>2019</strong><span>Year founded</span></li>
+          <li><strong>5</strong><span>Projects, one upcoming</span></li>
+          <li><strong>500+</strong><span>Students at one school event</span></li>
+        </ul>
+      </div>
       <div class="strip-give">
         <p class="strip-title">Help us reach one more village.</p>
         <p>Every bit helps us bring food, clothing, stationery, toiletries and, one day, free medical care.</p>
         <div class="strip-btns">
-          <a class="btn btn-cta" data-donate href="mailto:info@mishiafoundation.org?subject=I%20would%20like%20to%20support%20Mi%20Shia%20Foundation">Support Us</a>
-          <a class="btn btn-outline" href="#contact" data-enquiry="Partnership or grant">Partner with us</a>
+          <a class="btn btn-white" data-donate href="mailto:info@mishiafoundation.org?subject=I%20would%20like%20to%20support%20Mi%20Shia%20Foundation">Support Us <span aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-ghost" href="#contact" data-enquiry="Partnership or grant">Partner with us</a>
         </div>
       </div>
     </div>
@@ -104,8 +120,9 @@
   <section class="section about" id="about" aria-labelledby="about-title">
     <div class="wrap about-grid">
       <figure class="about-photo reveal">
+        <span class="brush brush-about" aria-hidden="true"></span>
         <img src="assets/images/support-sm.jpg" srcset="assets/images/support-sm.jpg 600w, assets/images/support.jpg 810w" sizes="(min-width: 900px) 440px, 90vw" alt="Mi Shia volunteers kneeling and smiling with children who are holding new books" width="600" height="800" loading="lazy" decoding="async">
-        <figcaption class="about-badge"><strong>Since 2019</strong><span>Charity starts at home</span></figcaption>
+        <figcaption class="about-badge"><strong>Since</strong><strong class="yr">2019</strong></figcaption>
       </figure>
 
       <div class="about-copy reveal">
@@ -114,17 +131,33 @@
         <p class="lede">Mi Shia is a nonprofit charity founded in 2019. We chose the name because we believe charity starts at home: our mission is to help Ghana, our home, in any way possible.</p>
         <p>We reach out to rural areas where basic necessities are hard to come by. We are small but growing, and we strive to do as much as we can, as often as we can, so that families have what they need to live with dignity and hope.</p>
 
-        <ul class="essentials" aria-label="What we give">
-          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 22h34a17 17 0 0 1-34 0z"/><path d="M18 15c0-3 3-3 3-7M27 15c0-3 3-3 3-7" class="acc"/></svg><span>Food</span></li>
-          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 6 6 13l5 7 6-3v24h14V17l6 3 5-7-11-7c-1 3-4 5-7 5s-6-2-7-5z"/><path d="M20 6c1 3 4 5 4 5s3-2 4-5" class="acc"/></svg><span>Clothing</span></li>
-          <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 41l2-9 22-22 7 7-22 22z"/><path d="M29 13l7 7" class="acc"/></svg><span>Stationery</span></li>
-          <li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="19" width="20" height="23" rx="4"/><path d="M20 19v-6h8v6M24 13V7h6"/><path d="M19 29h10" class="acc"/></svg><span>Toiletries</span></li>
+        <ul class="checks">
+          <li>Reaching rural areas where basic necessities are hard to come by</li>
+          <li>Raising awareness and funds to support our initiatives</li>
+          <li>Working with local and international partners</li>
         </ul>
 
         <div class="row-cta">
           <a class="btn btn-cta" href="#donate">Support Us</a>
           <a class="link-arrow" href="#vision">Our vision <span aria-hidden="true">&rarr;</span></a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE GIVE (hexagon cards) ============ -->
+  <section class="section services" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <header class="section-head center reveal">
+        <p class="kicker">What we give</p>
+        <h2 id="services-title">Everyday essentials for <span class="mark">rural families.</span></h2>
+        <p>Mi Shia focuses on reaching out to rural areas where basic necessities are hard to come by.</p>
+      </header>
+      <div class="hexcards">
+        <article class="hexcard"><span class="hex hex-orange"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 22h34a17 17 0 0 1-34 0z"/><path d="M18 15c0-3 3-3 3-7M27 15c0-3 3-3 3-7" class="acc"/></svg></span><h3>Food</h3><p>Regular food distribution to rural areas where it is hard to come by.</p></article>
+        <article class="hexcard"><span class="hex hex-green"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 6 6 13l5 7 6-3v24h14V17l6 3 5-7-11-7c-1 3-4 5-7 5s-6-2-7-5z"/><path d="M20 6c1 3 4 5 4 5s3-2 4-5" class="acc"/></svg></span><h3>Clothing</h3><p>Clothes shared with families in underserved communities.</p></article>
+        <article class="hexcard"><span class="hex hex-sky"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 41l2-9 22-22 7 7-22 22z"/><path d="M29 13l7 7" class="acc"/></svg></span><h3>Stationery</h3><p>Stationery distributed to rural communities.</p></article>
+        <article class="hexcard"><span class="hex hex-teal"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="19" width="20" height="23" rx="4"/><path d="M20 19v-6h8v6M24 13V7h6"/><path d="M19 29h10" class="acc"/></svg></span><h3>Toiletries</h3><p>Toiletries delivered to the families who need them.</p></article>
       </div>
     </div>
   </section>
@@ -193,15 +226,36 @@
     </div>
   </section>
 
+  <!-- ============ JOIN PANELS ============ -->
+  <section class="join" aria-label="Join our work">
+    <div class="wrap join-grid">
+      <article class="join-card join-dark">
+        <img src="assets/images/projects/vision-sm.jpg" alt="" width="560" height="420" loading="lazy" decoding="async">
+        <div class="join-body">
+          <h3>Partner with us</h3>
+          <p>We collaborate with local and international partners to expand our reach and resources. Funders and organisations are welcome.</p>
+          <a class="btn btn-ghost" href="#contact" data-enquiry="Partnership or grant">Start a conversation</a>
+        </div>
+      </article>
+      <article class="join-card join-orange">
+        <div class="join-body">
+          <h3>Support a project</h3>
+          <p>Choose a project, tell us how you would like to help, and our team will reply with the details.</p>
+          <a class="btn btn-white" href="projects.html#support-form">Support a project <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- ============ IMPACT BAND ============ -->
   <section class="band" aria-labelledby="band-title">
     <div class="wrap">
-      <h2 id="band-title" class="band-title reveal">One home. <span class="mark mark-sky">Real impact.</span></h2>
+      <h2 id="band-title" class="band-title reveal">One home. <span class="mark">Real impact.</span></h2>
       <ul class="band-grid">
-        <li class="reveal"><strong>2019</strong><span>Year we were founded</span></li>
-        <li class="reveal"><strong>5</strong><span>Projects, including one upcoming</span></li>
-        <li class="reveal"><strong>500+</strong><span>Students reached at one school hygiene event</span></li>
-        <li class="reveal"><strong>4</strong><span>Essentials delivered: food, clothing, stationery, toiletries</span></li>
+        <li class="reveal"><span class="hex hex-orange"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="10" width="32" height="30" rx="4"/><path d="M8 20h32M16 6v8M32 6v8"/><path d="M18 30l4 4 8-8" class="acc"/></svg></span><strong>2019</strong><span>Year we were founded</span></li>
+        <li class="reveal"><span class="hex hex-green"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40S8 30 8 19a8 8 0 0 1 16-3 8 8 0 0 1 16 3c0 11-16 21-16 21z"/><path d="M17 20h14M24 13v14" class="acc"/></svg></span><strong>5</strong><span>Projects, including one upcoming</span></li>
+        <li class="reveal"><span class="hex hex-sky"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="14" r="7"/><path d="M10 42c1-9 6-14 14-14s13 5 14 14"/><path d="M30 28l5 6" class="acc"/></svg></span><strong>500+</strong><span>Students reached at one school hygiene event</span></li>
+        <li class="reveal"><span class="hex hex-teal"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z"/></svg></span><strong>4</strong><span>Essentials delivered: food, clothing, stationery, toiletries</span></li>
       </ul>
     </div>
   </section>
@@ -402,6 +456,17 @@
     </dialog>
   </section>
 
+  <!-- ============ PICTURE STRIP ============ -->
+  <section class="strip-photos" aria-label="Moments from our outreach">
+    <ul class="polaroids">
+      <li><img src="assets/images/gallery/thumb/pic5.jpg" alt="Children at an outreach" width="560" height="556" loading="lazy" decoding="async"></li>
+      <li><img src="assets/images/gallery/thumb/pic2.jpg" alt="Volunteers in Mi Shia t-shirts" width="419" height="560" loading="lazy" decoding="async"></li>
+      <li><img src="assets/images/gallery/thumb/pic6.jpg" alt="A volunteer with a child and gifts" width="420" height="560" loading="lazy" decoding="async"></li>
+      <li><img src="assets/images/gallery/thumb/pic8.jpg" alt="Volunteers and children waving" width="560" height="420" loading="lazy" decoding="async"></li>
+      <li><img src="assets/images/gallery/thumb/Group-Pic.jpg" alt="The Mi Shia team with children and their gifts" width="420" height="560" loading="lazy" decoding="async"></li>
+    </ul>
+  </section>
+
   <!-- ============ CONTACT ============ -->
   <section class="section contact" id="contact" aria-labelledby="contact-title">
     <div class="wrap contact-grid">
@@ -453,6 +518,13 @@
 
   </main>
 
+  <section class="follow" aria-label="Follow our work">
+    <div class="wrap follow-in">
+      <p class="follow-title">See our latest outreach on Instagram.</p>
+      <a class="btn btn-white" href="https://www.instagram.com/mishia_foundation" target="_blank" rel="noopener">Follow @mishia_foundation <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+  </section>
+
   <footer class="foot">
     <div class="wrap foot-top">
       <div class="foot-brand">
@@ -462,14 +534,26 @@
       </div>
       <nav class="foot-col" aria-label="Explore">
         <h3>Explore</h3>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#vision">Our vision</a>
-        <a href="#donate">Support</a>
-        <a href="#founder">Founder</a>
-        <a href="#media">Media</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html#about">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#vision">Our vision</a>
+        <a href="index.html#donate">Support</a>
+        <a href="index.html#founder">Founder</a>
+        <a href="index.html#media">Media</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
+      <div class="foot-col foot-gallery">
+        <h3>Gallery</h3>
+        <ul>
+          <li><a href="index.html#media" tabindex="-1" aria-hidden="true"><img src="assets/images/gallery/thumb/pic5.jpg" alt="" width="90" height="90" loading="lazy" decoding="async"></a></li>
+          <li><a href="index.html#media" tabindex="-1" aria-hidden="true"><img src="assets/images/gallery/thumb/pic2.jpg" alt="" width="90" height="90" loading="lazy" decoding="async"></a></li>
+          <li><a href="index.html#media" tabindex="-1" aria-hidden="true"><img src="assets/images/gallery/thumb/pic6.jpg" alt="" width="90" height="90" loading="lazy" decoding="async"></a></li>
+          <li><a href="index.html#media" tabindex="-1" aria-hidden="true"><img src="assets/images/gallery/thumb/pic8.jpg" alt="" width="90" height="90" loading="lazy" decoding="async"></a></li>
+          <li><a href="index.html#media" tabindex="-1" aria-hidden="true"><img src="assets/images/gallery/thumb/pic.jpg" alt="" width="90" height="90" loading="lazy" decoding="async"></a></li>
+          <li><a href="index.html#media" tabindex="-1" aria-hidden="true"><img src="assets/images/gallery/thumb/pic7.jpg" alt="" width="90" height="90" loading="lazy" decoding="async"></a></li>
+        </ul>
+        <a class="foot-more" href="index.html#media">See all pictures</a>
+      </div>
       <div class="foot-col">
         <h3>Reach us</h3>
         <a href="mailto:info@mishiafoundation.org">info@mishiafoundation.org</a>
