@@ -117,7 +117,7 @@
   });
 
   /* ---- 4. cards deal in (staggered), replacing the plain fade ---- */
-  [['.proj-grid .proj', '.proj-grid'], ['.ways .way', '.ways'], ['.band-grid li', '.band-grid'], ['.hexcards .hexcard', '.hexcards'], ['.join-card', '.join-grid'], ['.polaroids li', '.polaroids'],
+  [['.proj-grid .proj', '.proj-grid'], ['.ways .way', '.ways'], ['.band-grid li', '.band-grid'], ['.hexcards .hexcard', '.hexcards'], ['.join-card', '.join-grid'], ['.tri-grid > *', '.tri-grid'], ['.polaroids li', '.polaroids'],
    ['.news-grid .news-card', '.news-grid'], ['.faq-list details', '.faq-list'], ['.objectives li', '.objectives']].forEach(function (pair) {
     var els = $$(pair[0]); if (!els.length) return;
     take(els); take($(pair[1]));
@@ -134,7 +134,7 @@
     if (body) gsap.from(Array.prototype.slice.call(body.children), { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', stagger: 0.08, clearProps: 'all',
       scrollTrigger: { trigger: box, start: 'top 72%', once: true } });
   });
-  $$('.about-photo, .founder-photos, .vision-side, .map-card, .form').forEach(function (el) {
+  $$('.about-cluster, .donate-photo, .donate-card, .founder-photos, .vision-side, .map-card, .form').forEach(function (el) {
     take(el);
     gsap.from(el, { y: 50, opacity: 0, duration: 1, ease: 'power3.out', clearProps: 'all', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
   });
@@ -160,7 +160,7 @@
       gsap.to('.hero-media', { yPercent: 14, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } });
       gsap.to('.hero-copy', { yPercent: -14, opacity: 0.15, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom 30%', scrub: true } });
     }
-    $$('.proj img, .feature img, .pj img, .about-photo img, .vision-side img, .fp-main').forEach(function (img) {
+    $$('.proj img, .feature img, .pj img, .vision-side img, .fp-main').forEach(function (img) {
       gsap.fromTo(img, { scale: 1.12 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'center center', scrub: true } });
     });
     if ($('.fp-small')) gsap.fromTo('.fp-small', { yPercent: 18 }, { yPercent: -18, ease: 'none', scrollTrigger: { trigger: '.founder', start: 'top bottom', end: 'bottom top', scrub: true } });
