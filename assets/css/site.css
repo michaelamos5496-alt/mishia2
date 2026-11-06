@@ -655,7 +655,7 @@ html.lenis, html.lenis body { height: auto; }
 .foot-gallery ul { display: grid; grid-template-columns: repeat(3, 72px); gap: 6px; }
 .foot-gallery img { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; }
 .foot-more { margin-top: 6px; }
-@media (min-width: 800px) { .foot-top { grid-template-columns: 1.4fr .7fr 1.1fr 1fr; gap: 44px; } }
+@media (min-width: 800px) { .foot-top { grid-template-columns: 1.5fr .8fr 1.2fr; gap: 56px; } }
 @media (max-width: 799px) { .foot-gallery { display: none; } }
 .hexcard { align-content: start; }
 .brush-about { left: auto; right: -16%; top: auto; bottom: 12%; width: 74%; height: 120px; transform: rotate(14deg); }
